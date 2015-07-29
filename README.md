@@ -8,7 +8,7 @@ Python port of https://github.com/github/email_reply_parser, including most of t
 
 ``` python
 >>> from email_reply_parser import  parse_reply
->>> print(read("""Hi Anton,
+>>> print(parse_reply("""Hi Anton,
 ...
 ... I'm totally fine, how are you?
 ...
