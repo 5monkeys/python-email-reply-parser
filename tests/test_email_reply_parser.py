@@ -207,3 +207,7 @@ I am currently using the Java HTTP API.\n""", str(reply.fragments[0]))
     def test_doesnt_remove_signature_delimiter_in_mid_line(self):
         reply = read(get_fixture("email_sig_delimiter_in_middle_of_line"))
         self.assertEqual(1, len(reply.fragments))
+
+    def test_complex_reply_chain(self):
+        reply = email('3_1')
+        self.assertEqual("r4\n", reply.visible_text())
